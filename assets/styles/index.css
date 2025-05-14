@@ -6,6 +6,13 @@
     --h1-p-weight:400;
     --h1-p-height:90px;
 
+    --title-size:18px;
+    --title-num-size:20px;
+    --title-desc-size:12px;
+
+    --title-num-weight:700;
+    
+
     --hero-color:#FDFCFA;
 }
 @font-face {
@@ -17,6 +24,9 @@
 }
 img {
     display: block;
+}
+.row {
+    display: flex;
 }
 body {
     font-family: anjoman;
@@ -59,3 +69,38 @@ h1 {
     left: 0;
 }
 
+#modern {
+    padding-top: 120px;
+    padding-right: 120px;
+}
+#modern .milad {
+    width: 400px;
+    height: 500px;
+    background: url(../images/bb873db48beaa7c40d174e76b3c82c4739b2a1a9.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    color:var(--hero-color) ;
+    padding-top:351px ;
+    padding-right: 40px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+#modern .milad p {
+    font-family: vazirmatn;
+    width: 250px;
+    margin: 0;
+}
+#modern .milad .title {
+    font-size:var(--title-size) ;
+    opacity: 80%;
+}
+#modern .milad .title .num {
+    font-size:var(--title-num-size) ;
+    font-weight: var(--title-num-weight);
+    opacity: 100%;
+}
+#modern .milad .desc {
+    font-size: var(--title-desc-size);
+    opacity: 60%;
+}
