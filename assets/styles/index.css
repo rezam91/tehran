@@ -5,15 +5,28 @@
     --h1-p-size:90px;
     --h1-p-weight:400;
     --h1-p-height:90px;
+    --modern-size:80px;
+    --h2-size:48px;
 
     --title-size:18px;
     --title-num-size:20px;
     --title-desc-size:12px;
+    --but-size:14px;
+    --last-li-size:16px;
+    --list-date-size:28px;
+    --ol-font-size:33px;
 
     --title-num-weight:700;
+    --title-patrol-weight:900;
+    --ol-font-weight:500;
     
 
     --hero-color:#FDFCFA;
+    --reserve-bg:#346671;
+    --patrol-bg:#346671;
+    --grad-bg:#ECEBE6;
+    --last-bg:#A63021;
+    --last-ul-border:#D0D0D0;
 }
 @font-face {
     font-family: 'anjoman';
@@ -45,7 +58,6 @@ body {
     padding-bottom: 352px;
     padding-top: 128px;
     background-repeat: no-repeat;
-    border: 5px solid red;
     position: relative;
     overflow: hidden;
 }
@@ -74,7 +86,7 @@ h1 {
     padding-right: 120px;
 }
 #modern .milad {
-    width: 400px;
+    width: 500px;
     height: 500px;
     background: url(../images/bb873db48beaa7c40d174e76b3c82c4739b2a1a9.jpg);
     background-repeat: no-repeat;
@@ -103,4 +115,178 @@ h1 {
 #modern .milad .desc {
     font-size: var(--title-desc-size);
     opacity: 60%;
+}
+#modern .tehran-text {
+    padding-right:162px ;
+    padding-top: 112px;
+    padding-left: 137px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+#modern .tehran-text p {
+    margin: 0;
+    display: flex;
+    align-items: end;
+}
+#modern .tehran-text p:nth-of-type(1),p:nth-of-type(3) {
+    gap: 85px;
+}
+#modern .tehran-text p:nth-of-type(1) span:nth-of-type(1) {
+    font-size:var(--modern-size) ;
+    font-weight:var(--title-num-weight) ;
+    line-height:var(--modern-size) ;
+
+}
+#modern .tehran-text p:nth-of-type(1) span:nth-of-type(2) {
+    font-family: Vazirmatn;
+    font-size:var( --title-num-size);
+    opacity: 40%;
+    text-align: left;
+}
+#modern .tehran-text p:nth-of-type(2) {
+    font-size:var(--h1-p-height) ;
+    line-height:var(--modern-size) ;
+}
+#modern .tehran-text p:nth-of-type(3) span:nth-of-type(1) {
+    font-family: Vazirmatn;
+    font-size:var( --title-num-size);
+    opacity: 40%;
+}
+#modern .tehran-text p:nth-of-type(3) span:nth-of-type(2) {
+    font-size:var(--modern-size) ;
+    font-weight:var(--title-num-weight) ;
+    line-height:var(--modern-size) ;
+}
+#modern .reserve {
+    background: linear-gradient(to left,var(--grad-bg) 29.1%,var(--reserve-bg) 29.1%);
+    padding-top:40px;
+    padding-bottom:44px;
+    padding-right:550px ;
+    display: flex;
+    gap:50px ;
+    align-items: center;
+    border-bottom-right-radius: 24px;
+}
+#modern .reserve a {
+    font-size: var(--title-num-size);
+    font-weight: var(--title-num-weight);
+    color: var(--hero-color);
+}
+/* last visits */
+#last {
+    padding-right: 120px;
+    padding-top: 120px;
+    padding-left: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+#last h2 {
+    font-size: var(--h2-size);
+    font-weight:var(--title-num-weight) ;
+}
+#last .last-right a {
+    background-color: var(--last-bg);
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    color: var(--hero-color);
+    font-weight: var(--title-num-weight);
+    font-size:var(--but-size) ;
+    margin-top: 48px;
+}
+#last .last-left ul {
+    width: 600px;
+    background-color: var(--grad-bg);
+    border: 1px solid var(--last-ul-border) ;
+    border-radius: 24px;
+    padding: 24px 32px;
+    list-style: none;
+}
+#last .last-left ul li {
+    padding-top:24px ;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    border-bottom: 1px solid var(--last-ul-border) ;
+    cursor: pointer;
+}
+#last .last-left ul li:last-of-type {
+    border-bottom:none;
+}
+#last .last-left ul li .list-num {
+    font-family: vazirmatn;
+    font-size:var(--last-li-size) ;
+    font-weight:var(--title-num-weight) ;
+    opacity: 40%;
+}
+#last .last-left ul li .date {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    position: relative;
+}
+#last .last-left ul li:nth-of-type(1) .date {
+    opacity: 40%;
+}
+#last .last-left ul li .date span:nth-of-type(1) {
+    font-family: vazirmatn;
+    font-size:var(--list-date-size) ;
+    font-weight:var(--title-num-weight) ;
+}
+#last .last-left ul li .date span:nth-of-type(2) {
+    font-family: vazirmatn;
+    font-size:var(--title-desc-size);
+}
+#last .last-left ul li .date img {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+#patrol {
+    background-color: var(--patrol-bg);
+    display: flex;
+    padding: 95px 120px 120px 120px;
+    justify-content: space-between;
+}
+#patrol h2 {
+    margin: 0;
+    font-size: var(--h2-size);
+    font-weight:var(--title-num-weight) ;
+}
+#patrol ol {
+    list-style-type:decimal-leading-zero;
+    width: 600px;
+}
+#patrol ol li {
+    position: relative;
+    color: var(--grad-bg);
+    opacity: 80%;
+    font-size:var(--h2-size) ;
+    font-weight:var(--title-patrol-weight) ;
+    padding: 12px 12px 24px 12px;
+}
+#patrol ol li:before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    border-bottom: 1px solid #00000033;
+    transform: translateY(-10px) translateX(70px);
+}
+#patrol ol li:first-of-type:before {
+    border-bottom:none;
+}
+#patrol ol li::marker {
+    font-family: vazirmatn;
+    font-size:var(--ol-font-size) ;
+    font-weight:var(--ol-font-weight) ;
+    color: var(--last-ul-border);
+    opacity: 30%;
+
+}
+#patrol ol li:last-of-type {
+    border-bottom:none;
 }
